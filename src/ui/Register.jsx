@@ -87,12 +87,6 @@ function Login() {
           Have an account? <Link to="/login">Log in</Link>
         </p>
       </Container>
-      <Button>Log in</Button>
-      <Container isRight={true}>
-        <p>
-          Have an account? <a href="#">Log in</a>
-        </p>
-      </Container>
     </Form>
   );
 }
