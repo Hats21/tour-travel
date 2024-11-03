@@ -16,11 +16,10 @@ const Button = styled.button`
 
 const Form = styled.form`
   /* position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  top: 50%;
+  left: 50%; */
   margin: 5rem auto;
-
+  /* transform: translate(-50%, -50%); */
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -57,6 +56,10 @@ function Login() {
   return (
     <Form>
       <Container>
+        <label>Your name</label>
+        <Input type="text" placeholder="full name" />
+      </Container>
+      <Container>
         <label>Email</label>
         <Input type="email" placeholder="your email" />
       </Container>
@@ -65,13 +68,15 @@ function Login() {
         <label>Password</label>
         <Input type="password" placeholder="your password" />
       </Container>
-      <Container isRight={true}>
-        <a href="#">Forgot password</a>
+      <Container>
+        <label>Confirm password</label>
+        <Input type="password" placeholder="confirm password" />
       </Container>
+
       <Button>Log in</Button>
       <Container isRight={true}>
         <p>
-          Dont have an account? <a href="#">Register here</a>
+          Have an account? <a href="#">Log in</a>
         </p>
       </Container>
     </Form>
