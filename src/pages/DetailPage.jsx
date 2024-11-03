@@ -61,6 +61,10 @@ function DetailPage() {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <StyledMapContainer>
+      <h1>Axum ancient heritage of tigray</h1>
+      <p>
+        location: <strong>axum</strong>
+      </p>
       <DetailHeader />
 
       <div
@@ -72,7 +76,7 @@ function DetailPage() {
         }}
       >
         <div style={{ justifySelf: "center", marginLeft: "4rem" }}>
-          <H1>QUICK FACTS</H1>
+          <H1>Quick facts</H1>
           <ul
             style={{
               listStyle: "none",
@@ -146,30 +150,6 @@ function DetailPage() {
             ""
           )}
         </div>
-      </div>
-
-      {/* <h1>Recommended places to visit</h1>
-        <Card imgSrc="img/img1.jpg" />
-        <Card imgSrc="img/img2.jpg" /> */}
-
-      <h1>Tourists point of view. </h1>
-
-      <div
-        style={{
-          padding: "1rem",
-          // border: "1px solid var(--color-stone-300)",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          rowGap: "4.8rem",
-          maxWidth: "800px",
-          borderRadius: "8px",
-          background: "var(--color-stone-0)",
-        }}
-      >
-        <Review />
-        <Review />
-        <Review />
-        <Review />
       </div>
 
       <div

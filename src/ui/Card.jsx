@@ -13,7 +13,7 @@ const StyledCard = styled.div`
   flex-direction: column;
   gap: 1rem;
   width: 350px;
-  height: auto;
+  height: 400px;
   /* overflow: hidden; */
 `;
 const CardHeader = styled.div`
