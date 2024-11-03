@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import Input from "./Input";
-import { Link } from "react-router-dom";
 
 const Button = styled.button`
   padding: 8px;
@@ -53,7 +52,7 @@ const Container = styled.div`
     `}
 `;
 
-function Login() {
+function ForgotPassword() {
   return (
     <Form>
       <h1
@@ -61,34 +60,16 @@ function Login() {
           fontSize: "2.4rem",
         }}
       >
-        Create a new Account
+        Reset your password
       </h1>
       <Container>
-        <label>Your name</label>
-        <Input type="text" placeholder="full name" />
-      </Container>
-      <Container>
-        <label>Email</label>
-        <Input type="email" placeholder="your email" />
+        <label>Enter your email</label>
+        <Input type="email" placeholder="example@gmail.com" />
       </Container>
 
-      <Container>
-        <label>Password</label>
-        <Input type="password" placeholder="your password" />
-      </Container>
-      <Container>
-        <label>Confirm password</label>
-        <Input type="password" placeholder="confirm password" />
-      </Container>
-
-      <Button>Register</Button>
-      <Container isRight={true}>
-        <p>
-          Have an account? <Link to="/login">Log in</Link>
-        </p>
-      </Container>
+      <Button>Submit</Button>
     </Form>
   );
 }
 
-export default Login;
+export default ForgotPassword;

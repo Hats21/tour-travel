@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Input from "./Input";
+import { Link } from "react-router-dom";
 
 const Button = styled.button`
   padding: 8px;
@@ -56,6 +57,13 @@ const Container = styled.div`
 function Login() {
   return (
     <Form>
+      <h1
+        style={{
+          fontSize: "2.4rem",
+        }}
+      >
+        Log in to your account
+      </h1>
       <Container>
         <label>Email</label>
         <Input type="email" placeholder="your email" />
@@ -66,12 +74,12 @@ function Login() {
         <Input type="password" placeholder="your password" />
       </Container>
       <Container isRight={true}>
-        <a href="#">Forgot password</a>
+        <Link to="/forgot_password">Forgot password</Link>
       </Container>
       <Button>Log in</Button>
       <Container isRight={true}>
         <p>
-          Dont have an account? <a href="#">Register here</a>
+          Dont have an account? <Link to="/register">Register here</Link>
         </p>
       </Container>
     </Form>

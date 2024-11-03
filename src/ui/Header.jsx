@@ -3,6 +3,7 @@ import SearchInput from "./SearchInput";
 import Logo from "./Logo";
 
 import { IoPersonCircleOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const StyledHeader = styled.div`
   position: relative;
@@ -15,7 +16,8 @@ const StyledHeader = styled.div`
   grid-column: 1/ -1;
 `;
 
-const Login = styled.button`
+const Login = styled(Link)`
+  text-decoration: none;
   font-size: 1.8rem;
   padding: 1rem 1.2rem;
   border: none;
@@ -51,7 +53,7 @@ function Header() {
         <div>
           {/* <Button type="secondary">size="small" Sign up</Button> */}
 
-          <Login>
+          <Login to="/login">
             <IoPersonCircleOutline />
             <span>Sign in</span>
           </Login>

@@ -33,7 +33,7 @@ const Input = styled.input`
   /* transition: all 0.3s; */
   &:focus {
     /* box-shadow: 0 5px 5px var(--color-brand-100); */
-    border: 2px solid var(--color-brand-600);
+    border: 2px solid var(--color-blue-400);
   }
 `;
 
