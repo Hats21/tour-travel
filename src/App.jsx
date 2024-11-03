@@ -9,6 +9,7 @@ import YourCart from "./pages/YourCart";
 import ContactUs from "./pages/ContactUs";
 import TotalBookings from "./pages/TotalBookings";
 import Dashboard from "./ui/Dashboard";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/your_booking" element={<h1>Your booking page</h1>} />
             <Route path="/cart" element={<YourCart />} />
             <Route path="/contact_us" element={<ContactUs />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<Navigate to="/" replace={true} />} />
           </Route>
         </Routes>
