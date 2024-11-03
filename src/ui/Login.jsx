@@ -79,7 +79,7 @@ function Login() {
       <Button>Log in</Button>
       <Container isRight={true}>
         <p>
-          Dont have an account? <Link to="/register">Register here</Link>
+          Don&apos;t have an account? <Link to="/register">Register here</Link>
         </p>
       </Container>
     </Form>

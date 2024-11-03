@@ -109,20 +109,6 @@ function DetailHeader() {
       <StyledButton position="left">
         <GrFormPrevious />
       </StyledButton>
-      <h1
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          padding: "1rem",
-          background: "var(--color-stone-200)",
-          color: "var(--color-stone-600)",
-        }}
-      >
-        About the heritage this is an axum which is invetned from the something
-        and also we can also
-      </h1>
     </div>
   );
 }

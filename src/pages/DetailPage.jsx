@@ -5,6 +5,7 @@ import Review from "../ui/Review";
 import DetailHeader from "../ui/DetailHeader";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
+import Carts from "../ui/Carts";
 import { useState } from "react";
 
 import { MdQrCodeScanner } from "react-icons/md";
@@ -20,7 +21,7 @@ import { LiaCarSideSolid } from "react-icons/lia";
 
 const H1 = styled.h1`
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
 
   background-image: -webkit-gradient(
     linear,
@@ -34,7 +35,10 @@ const H1 = styled.h1`
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 4.8rem;
+  /* margin-bottom: 4.8rem; */
+  margin-bottom: 1.2rem;
+  color: var(--color-stone-700);
+  font-weight: bold;
 `;
 
 const StyledMapContainer = styled.div`
@@ -50,10 +54,10 @@ const Li = styled.li`
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   & svg {
-    font-size: 3.2rem;
-    color: var(--color-brand-600);
+    font-size: 1.8rem;
+    color: var(--color-stone-600);
   }
 `;
 function DetailPage() {
@@ -128,76 +132,30 @@ function DetailPage() {
               letterSpacing: "1px",
             }}
           >
-            {!isExpanded
-              ? "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisratione sed sint velit eveniet voluptatibus est corrupti et praesentium. Ipsum maxime quasi est"
-              : `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
             ratione sed sint velit eveniet voluptatibus est corrupti et
             praesentium. Ipsum maxime quasi est adipisci nam sapiente modi, odit
             fugiat minima. Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Rerum, vitae similique nostrum hic nulla in repellendus vel
             dolorum cupiditate qui distinctio, suscipit libero dolore,
             accusantium id enim magni quidem. Cum. Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Dolore aperiam illo maiores? Ex
             praesentium ad dolor. Explicabo consequatur quis, similique
-            praesentium magni laboriosam nisi accusantium, ullam minus aliquam
-            suscipit laudantium?`}
           </p>
-          {!isExpanded ? (
-            <button onClick={() => setIsExpanded(true)}>
-              Continue reading
-            </button>
-          ) : (
-            ""
-          )}
         </div>
       </div>
-
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
-          padding: "1rem 2rem",
-          background: "var(--color-stone-100)",
-          maxWidth: "400px",
-          alignItems: "center",
+          // width: "120rem",
+          gap: "2rem",
+          margin: "2rem auto",
+          // backgroundColor: "red",
         }}
       >
-        <img
-          src="img/img1.jpg"
-          style={{
-            width: "50px",
-            height: "50px",
-            borderRadius: "50%",
-          }}
-        />
-
-        <p>What are you waiting for?</p>
-        <Button>Book Now</Button>
+        <Carts perchaseLevel="first" />
+        <Carts perchaseLevel="second" />
+        <Carts perchaseLevel="third" />
       </div>
-
-      {/* <div
-        style={{
-          position: "absolute",
-          top: "0",
-          right: "50px",
-          padding: "1rem",
-          background: "var(--color-stone-0)",
-        }}
-      >
-        <p>Other peoples also visit</p>
-        <div
-          style={{
-            height: "600px",
-            overflowY: "scroll",
-          }}
-        >
-          <CardSmall imgSrc="img/img1.jpg" />
-
-          <CardSmall imgSrc="img/img2.jpg" />
-          <CardSmall imgSrc="img/img3.jpg" />
-          <CardSmall imgSrc="img/img4.jpg" />
-        </div>
-      </div> */}
     </StyledMapContainer>
   );
 }
